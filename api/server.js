@@ -1,5 +1,8 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
+
+app.use(cors());
 
 const database = require("./server/database");
 
@@ -16,5 +19,5 @@ app.get('/decimalOddsLessThanTwo', (req, res) => {
 });
 
 app.listen(4000, () => {
-  console.log('Example app listening on port 3000!');
+  console.log('Example app listening on port 4000!');
 });
