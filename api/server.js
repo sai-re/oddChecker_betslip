@@ -4,18 +4,12 @@ const cors = require('cors');
 
 app.use(cors());
 
-const database = require("./server/database");
-
-function respondWithOdds(res, predicate) {
-    res.json(database.getAllBetsByDecimal(predicate));
-}
-
 app.get('/decimalOddsMoreThanTwo', (req, res) => {
-    respondWithOdds(res, o => o > 2);
+    // code here
 });
 
 app.get('/decimalOddsLessThanTwo', (req, res) => {
-    respondWithOdds(res, o => o < 2);
+    // code here
 });
 
 app.listen(4000, () => {

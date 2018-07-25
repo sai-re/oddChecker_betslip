@@ -43,4 +43,4 @@ TASKS
 
 2. Style the betslip to replicate the layout in the mock-up plus any extra branding you'd like to add.
 
-3. If familiar with javascript testing please provide some unit tests for the functionality in the betslip. If not familiar with specific test frameworks please provide some high level pseduo test declarations that you think would be beneficial if you had to maintain this functionality long term.
+3. Provide some unit tests for the functionality in the betslip. If not familiar with specific test frameworks please provide some high level pseduo test declarations that you think would be beneficial if you had to maintain this functionality long term.
