@@ -13,11 +13,9 @@ An annotated wireframe for the application is provided in the file mock-up.png.
 API
 --------
 
-The api exposes 2 endpoints:
+The api should expose 2 endpoints:
     - /decimalOddsLessThanTwo
     - /decimalOddsMoreThanTwo
-
-The endpoints return a json response containing real Oddschecker bet data that has been grouped into bets with odds over 2.0 and under 2.0.
 
 
 ---------
@@ -39,8 +37,10 @@ The webpage for the website will be available on port 3000 whilst the api can be
 TASKS
 --------
 
-1. Create the betslip application with the functionality described in the mock-up file.
+1. Implement the function bodies for the two api endpoints in the directory api/server.js. The implementation should be completed in such a way as to avoid duplicating code across the two endpoints. The endpointss should each return a json response containing a selection of bets based on whether they contain a bookmaker odds entry with an oddsDecimal value above or below 2.0.
 
-2. Style the betslip to replicate the layout in the mock-up plus any extra branding you'd like to add.
+2. Create the betslip application with the functionality described in the mock-up file.
 
-3. Provide some unit tests for the functionality in the betslip. If not familiar with specific test frameworks please provide some high level pseduo test declarations that you think would be beneficial if you had to maintain this functionality long term.
+3. Style the betslip to replicate the layout in the mock-up plus any extra branding you'd like to add.
+
+4. Provide some unit tests for the functionality in the betslip. If not familiar with specific test frameworks please provide some high level pseduo test declarations that you think would be beneficial if you had to maintain this functionality long term.
