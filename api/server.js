@@ -9,6 +9,7 @@ app.use(cors());
 const getOdds = returnOdds => data.bets.filter(elem => elem.odds.some(returnOdds));
 
 app.get('/decimalOddsMoreThanTwo', (req, res) => {
+  //callback function to pass into some which checks oddsDecimal in odds array and returns true if condition is passed
   const moreThanTwo = item => item.oddsDecimal > 2;
   res.json(getOdds(moreThanTwo));
 });

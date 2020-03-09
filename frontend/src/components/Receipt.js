@@ -6,7 +6,7 @@ function Receipt(props) {
     const total = props.location.state.stakes.reduce((accum, next) => accum + next);
 
     //back to home
-    const handleClick = e => props.history.push('/');
+    const handleClick = () => props.history.push('/');
 
     return ( 
         <div className="Receipt">

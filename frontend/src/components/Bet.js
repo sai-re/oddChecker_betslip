@@ -42,7 +42,7 @@ class Bet extends Component {
                     <p className="Bet__odds">Best Odds: <span>{elem.bestOdd}</span></p>
                 </div>
                 
-                {/* create input for stake passing in index to handle function */}
+                {/* create input for stake passing in index to inline handle function */}
                 <div className="Bet__stake-holder">
                     <input className="Bet__stake" min="0" type="number" placeholder="enter stake" onChange={(e) => this.handleStakes(e, i)}/>
                 </div>

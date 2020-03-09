@@ -26,11 +26,12 @@ class Betslip extends Component {
 			const response = await fetch(url);
 			const data = await response.json();
 
+			//temp array
 			const betsShort = [];
 			
 			//push best odd and bet name to temp array
 			data.forEach(elem => {
-				//gets odds decimal from object and into array and use spread to get max value.
+				//map through odds arrray and return as array oddsDecimal property, then spread into Max to find largest
 				let bestOdd = Math.max(...elem.odds.map(item => item.oddsDecimal), 0);
 				betsShort.push({name: elem.name, bestOdd: bestOdd});
 			})
