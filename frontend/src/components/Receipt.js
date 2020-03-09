@@ -1,22 +1,17 @@
-import React, {Component} from 'react';
+import React from 'react';
 import '../styles/Receipt.css';
 
-class Receipt extends Component {
-    constructor(props) {
-        super(props);
-    }
+function Receipt(props) {
+    //calculate sum of stakes
+    const total = props.location.state.stakes.reduce((accum, next) => accum + next);
 
-	render() {
-        const total = this.props.location.state.stakes.reduce((accum, next) => accum + next);
-
-		return ( 
-			<div className="Receipt">
-                <h1>Receipt</h1>
-                <h2>Your bet has been placed</h2>
-                <p>Your total is £{total}</p>
-			</div>
-		);
-	}
+    return ( 
+        <div className="Receipt">
+            <h1>Receipt</h1>
+            <h2>Your bet has been placed</h2>
+            <p>Your total stake is £{total.toFixed(2)}</p>
+        </div>
+    );	
 }
 
 export default Receipt;

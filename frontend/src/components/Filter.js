@@ -48,11 +48,14 @@ class Filter extends Component {
     }
 
     handleOption(e) {
+        //set state to endpoint then fetch from api using endpoint
         this.setState({endpoint: e.target.value}, () => this.getData());
     }
 
     //set is mounted to true.
     componentDidMount = () => this._isMounted = true;
+
+    componentDidUpdate = () => console.log(this.state);
 
     //reset mounted so fetch doesn't run on another page.
     componentWillUnmount = () => this._isMounted = false;

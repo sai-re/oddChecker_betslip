@@ -27,7 +27,7 @@ class Bet extends Component {
     }
 
     handleClick(e) {
-        //push to new route if stake has been entered
+        //push to new route if stake has been entered passing stakes as props to route
         if (this.state.stakes.length > 0) this.props.history.push('/receipt', {stakes: this.state.stakes});
     }
 
@@ -37,8 +37,8 @@ class Bet extends Component {
         //create list of bets 
         const printBets = this.props.bets.map((elem, i) =>            
             <li key={i}>
-                <p className="Bet__name">{elem.name}</p>
-                <p className="Bet__odds">{elem.bestOdd}</p>
+                <p className="Bet__name">Name: {elem.name}</p>
+                <p className="Bet__odds">Decimal: {elem.bestOdd}</p>
                 
                 {/* create input for stake passing in index to handle function */}
                 <div className="Bet__stake-holder">
