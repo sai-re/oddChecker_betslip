@@ -36,13 +36,15 @@ class Bet extends Component {
 	render() {
         //create list of bets 
         const printBets = this.props.bets.map((elem, i) =>            
-            <li key={i}>
-                <p className="Bet__name">Name: {elem.name}</p>
-                <p className="Bet__odds">Decimal: {elem.bestOdd}</p>
+            <li key={i} className="Bet__item">
+                <div className="Bet__info">
+                    <p className="Bet__name">Name: <span>{elem.name}</span></p>
+                    <p className="Bet__odds">Best Odds: <span>{elem.bestOdd}</span></p>
+                </div>
                 
                 {/* create input for stake passing in index to handle function */}
                 <div className="Bet__stake-holder">
-                    <input type="number" placeholder="enter stake" onChange={(e) => this.handleStakes(e, i)}/>
+                    <input className="Bet__stake" min="0" type="number" placeholder="enter stake" onChange={(e) => this.handleStakes(e, i)}/>
                 </div>
             </li>
         );
@@ -53,7 +55,9 @@ class Bet extends Component {
                     {printBets}
                 </ul>
 
-                <button onClick={this.handleClick}>Bet now</button>
+                <div className="Bet__btn-holder">
+                    <button className="Bet__btn" onClick={this.handleClick}>Bet now</button>
+                </div>
 			</div>
 		);
 	}

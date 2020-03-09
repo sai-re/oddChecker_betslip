@@ -1,0 +1,82 @@
+.Bets__list {
+    margin-top: 10px;
+}
+
+.Bet__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    padding: 15px;
+    background-color: #fafafa;
+    border-radius: 5px;
+}
+
+.Bet__item:not(:first-child) {
+    margin-top: 10px;
+}
+
+.Bet__info {
+    color: #20242e;
+}
+
+.Bet__info p {
+    border-bottom: 1px solid #eaeae9;
+    padding-bottom: 5px;
+}
+
+.Bet__info span {
+    font-weight: bold;
+}
+
+.Bet__stake {
+    width: 121px;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 2px solid #eaeae9;
+
+    background-image: url('../images/pound.svg');
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: 5% 45%;
+    padding: 5px 5px 5px 20px;
+}
+
+.Bet__stake:focus {
+    border: solid 2px #0edd98;
+}
+
+.Bet__btn-holder {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.Bet__btn {
+    width: 136px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #0edd98;
+    color: #333333;
+    cursor: pointer;
+    transition: all .15s ease;
+}
+
+.Bet__btn:hover {
+    background-color: #0bc789;
+    transform: translateY(-1px);
+    box-shadow: 0 7px 14px rgba(50,50,93,0.1), 0 3px 6px rgba(0,0,0,0.08);
+}
+
+@media only screen and (max-width: 600px) {
+    .Bet__info span {
+        display: block;
+        margin-top: 5px;
+    }
+}

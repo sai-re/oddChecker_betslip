@@ -1,5 +1,40 @@
 .Betslip {
     width: 500px;
-    background-color: #efefef;
+    max-width: 500px;
+    background-color: #033954;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+    border-radius: 5px;
     padding: 20px;
+}
+
+.Betslip__holder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Betslip__title {
+    color: #f6f6f6;
+}
+
+.Betslip__label {
+    margin-right: 5px;
+    color: #f6f6f6;
+}
+
+.Betslip__select {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    .Betslip__holder {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .Betslip__filter-holder {
+        margin-top: 10px;
+    }
 }

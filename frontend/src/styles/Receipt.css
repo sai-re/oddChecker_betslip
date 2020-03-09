@@ -1,5 +1,29 @@
 .Receipt {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
     width: 500px;
-    background-color: #efefef;
+    max-width: 500px;
+    background-color: #033954;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+    border-radius: 5px;
     padding: 20px;
+
+    color: #f6f6f6;
+}
+
+.Receipt__sub-title {
+    margin-top: 10px;
+}
+
+.Receipt__total {
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+    .Receipt {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
