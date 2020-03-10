@@ -30,8 +30,6 @@ class Bet extends Component {
         //push to new route if stake has been entered passing stakes as props to route
         if (this.state.stakes.length > 0) this.props.history.push('/receipt', {stakes: this.state.stakes});
     }
-
-    componentDidUpdate = () => console.log(this.state)
     
 	render() {
         //create list of bets 

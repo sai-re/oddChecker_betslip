@@ -52,8 +52,6 @@ class FetchData extends Component {
 	//set is mounted to true.
 	componentDidMount = () => this._isMounted = true;
 
-	componentDidUpdate = () => console.log(this.state);
-
 	//reset mounted so fetch doesn't run on another page.
 	componentWillUnmount = () => this._isMounted = false;
 
