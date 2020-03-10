@@ -1,0 +1,16 @@
+FETCH COMPONENT
+    -check if render correctly
+    -Is correct endpoint being called
+    -Is correct JSON being sent
+    -consider switch statement if more endpoints are required
+
+BETSLIP COMPONENT
+    -check if render correctly
+
+BET COMPONENT
+    -check if render correctly
+    -check if correct array indexes being modified
+
+RECEIPT COMPONENT
+    -check if render correctly
+    -check if total and equation is correct
