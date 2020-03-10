@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Betslip from './components/Betslip'
-import Receipt from './components/Receipt'
+import FetchData from './components/FetchData';
+import Receipt from './components/Receipt';
 
 import './App.css';
 
@@ -11,7 +11,7 @@ class App extends Component {
 		return (
 			<div className="App">
 				<Switch>
-					<Route path="/" exact component={Betslip} />
+					<Route path="/" exact component={FetchData} />
 					<Route path="/receipt" exact component={Receipt} />
 				</Switch>
 			</div>
