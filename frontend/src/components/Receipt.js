@@ -3,7 +3,12 @@ import '../styles/Receipt.css';
 
 function Receipt(props) {
     //calculate sum of stakes
-    const total = props.location.state.stakes.reduce((accum, next) => accum + next);
+    const total = props.location.state.stakes.reduce((accum, next) => {
+        //in case first stake left blank
+        if (accum === undefined) accum = 0;
+
+        return accum + next
+    });
 
     //back to home
     const handleClick = () => props.history.push('/');
