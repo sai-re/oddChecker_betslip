@@ -7,8 +7,8 @@ class Bet extends Component {
         super(props);
 
         this.state = {
-            //create new array depending on size of bets
-            stakes: new Array(this.props.bets.length)
+            //create new array
+            stakes: []
         }
 
         // this.handleStakes = this.handleStakes.bind(this)
