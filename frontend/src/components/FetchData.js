@@ -2,9 +2,6 @@ import React, {Component} from 'react';
 import Betslip from './Betslip';
 
 class FetchData extends Component {
-	//check to see if component is mounted, stop data being fetched outside of component
-	_isMounted = false;
-
 	constructor(props) {
 		super(props);
 
@@ -36,7 +33,7 @@ class FetchData extends Component {
 			})
 
 			//Check if to see if component has mounted
-			if (this._isMounted) this.setState({disable: true, bets: betsShort});
+			this.setState({disable: true, bets: betsShort});
 
 		} catch(err) {
 			console.log(err)
@@ -49,13 +46,8 @@ class FetchData extends Component {
 		this.getData(endpoint);
 	}
 
-	//set is mounted to true.
-	componentDidMount = () => this._isMounted = true;
-
-	//reset mounted so fetch doesn't run on another page.
-	componentWillUnmount = () => this._isMounted = false;
-
 	render() {
+		console.log(this.state)
 		return (
 			//pass data as props to betslip
             <Betslip data={this.state} handler={this.handleOption} />
