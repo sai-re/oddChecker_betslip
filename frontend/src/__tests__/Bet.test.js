@@ -41,7 +41,7 @@ class Bet extends Component {
                 
                 {/* create input for stake passing in index to inline handle function */}
                 <div className="Bet__stake-holder">
-                    <input className="Bet__stake" min="0" type="number" placeholder="enter stake" onChange={(e) => this.handleStakes(e, i)}/>
+                    <input aria-label="stake-input" className="Bet__stake" min="0" type="number" placeholder="enter stake" onChange={(e) => this.handleStakes(e, i)}/>
                 </div>
             </li>
         );
@@ -64,9 +64,21 @@ const state = {
 	bets: [{name: "Sara Errani", bestOdd: 2.54}, {name: "Svetlana Kuznetsova", bestOdd: 2.2}]
 }
 
+const calculate = (val, odds) => (odds * val) - val;
+
 describe("Bet list tests", () => {
 	it("renders without crashing", () => {
 		const {getByText} = render(<Bet bets={state.bets} />);
 		expect(getByText("Sara Errani")).toBeInTheDocument();
     });
+    
+	it("change is fired", () => {
+		const {getAllByLabelText} = render(<Bet bets={state.bets} />);
+		fireEvent.change(getAllByLabelText("stake-input")[0], {target: {value: 18}});
+		expect(getAllByLabelText("stake-input")[0].value).toBe("18");
+	});
+
+    it('calculate stake is correct', () => {
+        expect(calculate(8, 2.54)).toBe(12.32);
+    })
 });
